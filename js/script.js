@@ -19,52 +19,52 @@ function showPage(pageNum, students) {
 	// then loop through all students in list in our student list argument
 	// if student should be on this page number
 	// show the student
+	
 
+	//The section below adds page links based on how many students are in the list.
 	var div = document.createElement('div');
+	var ul = document.createElement('ul');
 	
 	document.body.appendChild(div);
 	div.className = 'pagination';
-
-	
-	//li.innerHTML ='<a href="#">' + pageNum + '</a>';
-
+	div.appendChild(ul);
 
 	
 	
 
 function createPageLinks(pageNum) {
 	
-	let ul = document.createElement('ul');
 	let li = document.createElement('li');
+	let a = document.querySelectorAll('a');
 
-	
-	div.appendChild(ul);
 	li.innerHTML = '<a href="#">' + pageNum + '</a>';
 	ul.appendChild(li);
-	li.className= 'pagination li';
-	
+	let links = ul.lastChild;
 
-}
+	links.addEventListener('click', () =>{
+			showPage(pageNum, students)	
+
+	
+			
+	})
+
+		console.log(document.querySelectorAll('a'));
+	
+	}
 
 function appendPageLinks(students) {
-let page = Math.ceil(students.length/10);
+	let page = Math.ceil(students.length/10);
+
+	for(let i = 0 ; i < page; i++){
+		createPageLinks(pageNum)
+		pageNum += 1;
+	}
 
 
-for(let i = 0 ; i < page; i++){
-	createPageLinks(pageNum)
-	pageNum += 1;
+
+
+ 
 }
-
-
-}
-
- 	
-document.addEventListener("click", function(){
-
-  		showPage(2, students);
-  		
-  
-});
 
 
 
