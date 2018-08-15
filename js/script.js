@@ -35,7 +35,6 @@ function showPage(pageNum, students) {
 function createPageLinks(pageNum) {
 	
 	let li = document.createElement('li');
-	let a = document.querySelectorAll('a');
 
 	li.innerHTML = '<a href="#">' + pageNum + '</a>';
 	ul.appendChild(li);
@@ -48,7 +47,7 @@ function createPageLinks(pageNum) {
 			
 	})
 
-		console.log(document.querySelectorAll('a'));
+		
 	
 	}
 
